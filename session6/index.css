@@ -60,14 +60,14 @@ ol {
 
 /* CLASS SELECTOR */
 .offering-item {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* DECENDANT SELECTOR */
 #bootcamp-learning-list li {
-    color: gray;
+  color: gray;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
