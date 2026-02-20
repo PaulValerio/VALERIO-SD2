@@ -18,15 +18,13 @@
   </head>
   <body>
     <!-- NAVBAR START -->
-    <nav class="p-3 bg-nav sticky-top border-nav">
+    <nav class="p-3 bg-darker sticky-top border-nav">
       <div class="d-flex align-items-center">
-        <img
-          src="gowOmega.webp"
-          alt="noIMG"
-          class="img-screen img-fluid nav-img-size me-auto"
-        />
+        <a href="#profile" class="me-auto">
+          <img src="gowOmega.png" alt="noIMG" class="img-fluid nav-img-size" />
+        </a>
 
-        <ul class="d-block d-md-flex list-unstyled gap-5">
+        <ul class="d-flex flex-column flex-md-row list-unstyled gap-3 gap-md-5">
           <li>
             <h3>
               <a href="#about" class="text-decoration-none text-red">About</a>
@@ -34,7 +32,9 @@
           </li>
           <li>
             <h3>
-              <a href="" class="text-decoration-none text-red">Arsenal</a>
+              <a href="#arsenal" class="text-decoration-none text-red"
+                >Arsenal</a
+              >
             </h3>
           </li>
           <li>
@@ -48,27 +48,38 @@
     <!-- NAVBAR END -->
 
     <!-- PROFILE START -->
-    <main class="container-fluid bg-main text-light mb-5">
-      <div class="d-flex flex-column align-items-center text-center">
-        <h1 class="my-3">KRATOS</h1>
+    <main id="profile" class="bg-main text-light border-b">
+      <div
+        class="position-relative d-flex flex-column align-items-center text-center"
+      >
+        <h1 class="my-3 z-1">KRATOS</h1>
 
-        <p class="display-1">The God Of War</p>
+        <p class="display-1 z-1">The God Of War</p>
 
-        <img src="Kratos.png" alt="NoIMG" class="img-fluid profile-img" />
+        <img
+          src="gowOmega.png"
+          alt="NoIMG"
+          class="position-absolute top-50 start-50 translate-middle omega-img z-0"
+        />
+
+        <img
+          src="KratosRage.png"
+          alt="NoIMG"
+          class="img-fluid kratos-rage-img z-1"
+        />
       </div>
     </main>
     <!-- PROFILE END -->
 
     <!-- STORY START -->
-    <main class="text-center">
-      <h1 id="about" class="text-red my-5">ABOUT</h1>
+    <main class="container-fluid p-5 bg-darker text-light text-center border-b">
+      <h1 id="about" class="text-red mb-5 mb-md-3">ABOUT</h1>
 
-      <article class="d-flex align-content-stretch">
-        <section class="col-12 col-md-4">
-          <div
-            class="h-100 text-center border border-dark border-5 rounded-5 mx-2 mx-md-3 my-3 my-lg-0"
-          >
+      <article class="d-flex flex-column flex-lg-row">
+        <section class="col-12 col-lg-4 mx-2 my-3 my-lg-0">
+          <div class="h-100 text-center border-ridge rounded-5">
             <h3 class="py-3 bg-red rounded-top-4 text-light">Origin</h3>
+
             <p class="text-justify p-3">
               Kratos begins as a Spartan warrior driven by survival and
               conquest. In God of War, Ares deceives him into killing his own
@@ -81,13 +92,10 @@
           </div>
         </section>
 
-        <section class="col-12 col-md-4">
-          <div
-            class="h-100 text-center border border-dark border-5 rounded-5 mx-2 mx-md-3 my-3 my-lg-0"
-          >
-            <h3 class="py-3 text-light bg-red rounded-top-4 text-light">
-              Past
-            </h3>
+        <section class="col-12 col-lg-4 mx-2 my-3 my-lg-0">
+          <div class="h-100 text-center border-ridge rounded-5">
+            <h3 class="py-3 text-light bg-red rounded-top-4">Past</h3>
+
             <p class="text-justify p-3">
               His past unfolds as a long war against Olympus itself. Betrayal by
               Zeus pushes him into open rebellion, leading to the destruction of
@@ -103,11 +111,10 @@
           </div>
         </section>
 
-        <section class="col-12 col-md-4">
-          <div
-            class="h-100 text-center border border-dark border-5 rounded-5 mx-2 mx-md-3 my-3 my-lg-0"
-          >
+        <section class="col-12 col-lg-4 mx-2 my-3 my-lg-0">
+          <div class="h-100 text-center border-ridge rounded-5">
             <h3 class="py-3 bg-red rounded-top-4 text-light">Present</h3>
+
             <p class="text-justify p-3">
               In the present, Kratos lives as a restrained and disciplined
               warrior who prioritizes fatherhood over battle. He controls his
@@ -126,9 +133,78 @@
     </main>
     <!-- STORY END -->
 
-    <!-- 2ND SECTION START -->
-    <div class="container-fluid bg-profile text-light"></div>
-    <!-- 2ND SECTION START -->
+    <!-- ARSENAL START -->
+    <main
+      class="container-fluid position-relative p-5 bg-red text-light text-center"
+    >
+      <h1 id="arsenal" class="text-red mb-5 mb-md-3">ARSENAL</h1>
+      <img
+        src="KratosStand.png"
+        alt="NoIMG"
+        class="position-absolute d-none d-lg-flex kratos-stand-img bottom-0 start-0"
+      />
+
+      <article
+        class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-end"
+      >
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-double rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 text-light border-b">Leviathan Axe</h3>
+            <img
+              src="LeviathanAxe.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-double rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 text-light border-b">Blade Of Chaos</h3>
+            <img
+              src="BladeOfChaos.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+      </article>
+
+      <article
+        class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-end"
+      >
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-double rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 text-light border-b">Draupnir Spear</h3>
+            <img
+              src="DraupnirSpear.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-double rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 text-light border-b">Guardian Shield</h3>
+            <img
+              src="GuardianShield.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- ARSENAL END -->
 
     <!-- Bootstrap Script -->
     <script

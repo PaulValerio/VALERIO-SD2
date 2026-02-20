@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --primary: rgb(79, 0, 0);
+  --secondary: rgb(43, 0, 0);
+  --dark-red: rgb(116, 0, 0);
+  --border-color: rgba(139, 0, 0, 0.6);
+  --textcolor: rgb(152, 0, 0);
 }
 
-.img-screen {
-  mix-blend-mode: screen;
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+  scrollbar-color: var(--primary) black;
 }
 
 .nav-img-size {
@@ -17,29 +23,57 @@ html {
   height: auto;
 }
 
-.bg-nav {
+.bg-darker {
   background-color: black;
 }
 
 .border-nav {
-  border: 1rem double rgb(79, 0, 0);
+  border: 1rem double var(--primary);
 }
 
-.profile-img {
+.border-b {
+  border-bottom: 1rem double var(--dark-red);
+}
+
+.border-ridge {
+  border: 1rem ridge var(--border-color);
+}
+
+.border-double {
+  border: 1rem double var(--border-color);
+}
+
+.omega-img {
+  min-width: 10rem;
+  width: 50%;
+  max-width: 60rem;
+}
+
+.kratos-rage-img {
   width: clamp(35rem, 40rem, 45rem);
-  filter: drop-shadow(20px 0px 0px rgb(116, 0, 0));
+  filter: drop-shadow(20px 0px 0px var(--primary));
 }
 
 .text-red {
-  color: rgb(152, 0, 0);
+  color: var(--textcolor);
 }
 
 .bg-main {
-  background-color: rgb(43, 0, 0);
+  background-color: var(--secondary);
 }
 
 .bg-red {
-  background-color: rgb(79, 0, 0);
+  background-color: var(--secondary);
+}
+
+.kratos-stand-img {
+  min-width: 20rem;
+  height: 90%;
+  max-height: 80rem;
+  min-width: 20rem;
+  width: 50%;
+  max-width: 60rem;
+  filter: drop-shadow(20px 10px 0px var(--primary));
 }
 
 .text-justify {
