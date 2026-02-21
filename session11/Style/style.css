@@ -96,7 +96,7 @@ html {
 @media screen and (orientation: portrait) and (min-width: 300px) {
   .kratos-rage-img {
     height: 50dvh;
-    width: 150dvw;
+    width: 140dvw;
   }
 
   .omega-img {
@@ -114,8 +114,8 @@ html {
 /* For Tablets */
 @media screen and (orientation: portrait) and (min-width: 760px) and (min-height: 1000px) {
   .kratos-rage-img {
-    height: 50dvh;
-    width: 90dvw;
+    height: 55dvh;
+    width: 100dvw;
   }
 
   .omega-img {
