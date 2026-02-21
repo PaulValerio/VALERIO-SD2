@@ -61,7 +61,7 @@
       >
         <h1 class="my-3 z-1">KRATOS</h1>
 
-        <p class="display-1 z-1">The God Of War</p>
+        <p class="display-1 z-1 mx-3">The God Of War</p>
 
         <img
           src="./Images/gowOmega.png"
@@ -72,7 +72,7 @@
         <img
           src="./Images/KratosRage.png"
           alt="NoIMG"
-          class="kratos-rage-img z-1"
+          class="kratos-rage-img"
         />
       </div>
     </main>
@@ -80,16 +80,26 @@
 
     <!-- STORY START -->
     <main
-      class="container-fluid p-5 bg-darker text-light text-center align-content-center border-b"
+      class="container-fluid position-relative p-5 bg-darker text-light overflow-hidden text-center align-content-center border-b"
     >
-      <h1 id="about" class="text-red mb-5 mb-md-3">ABOUT</h1>
+      <h1 id="about" class="text-red mb-5 mb-md-3 position-relative z-1">
+        ABOUT
+      </h1>
+      <img
+        src="./Images/KratosBG.png"
+        alt="NoIMG"
+        class="position-absolute top-50 start-80 translate-middle d-none d-lg-flex w-100 h-100 Kratos-BG object-fit-contain z-0"
+      />
+      <article
+        class="d-flex flex-column align-items-center align-items-lg-start position-relative z-1"
+      >
+        <section class="mx-2 my-3 col-12 col-lg-6">
+          <div
+            class="h-100 mx-lg-0 text-center border-ridge rounded-5 overflow-hidden"
+          >
+            <h3 class="py-3 bg-red text-light">Origin</h3>
 
-      <article class="d-flex flex-column flex-lg-row">
-        <section class="col-12 col-lg-4 mx-2 my-3 my-lg-0">
-          <div class="h-100 text-center border-ridge rounded-5">
-            <h3 class="py-3 bg-red rounded-top-4 text-light">Origin</h3>
-
-            <p class="text-justify p-3">
+            <p class="text-justify p-3 bg-darker">
               Kratos begins as a Spartan warrior driven by survival and
               conquest. In God of War, Ares deceives him into killing his own
               family, then binds their ashes to his skin as a permanent mark of
@@ -101,11 +111,13 @@
           </div>
         </section>
 
-        <section class="col-12 col-lg-4 mx-2 my-3 my-lg-0">
-          <div class="h-100 text-center border-ridge rounded-5">
-            <h3 class="py-3 text-light bg-red rounded-top-4">Past</h3>
+        <section class="mx-2 my-3 col-12 col-lg-6">
+          <div
+            class="h-100 mx-lg-0 text-center border-ridge rounded-5 overflow-hidden"
+          >
+            <h3 class="py-3 text-light bg-red">Past</h3>
 
-            <p class="text-justify p-3">
+            <p class="text-justify p-3 bg-darker">
               His past unfolds as a long war against Olympus itself. Betrayal by
               Zeus pushes him into open rebellion, leading to the destruction of
               gods, titans, and much of Greece. Every victory deepens the cycle
@@ -120,11 +132,13 @@
           </div>
         </section>
 
-        <section class="col-12 col-lg-4 mx-2 my-3 my-lg-0">
-          <div class="h-100 text-center border-ridge rounded-5">
-            <h3 class="py-3 bg-red rounded-top-4 text-light">Present</h3>
+        <section class="mx-2 my-3 col-12 col-lg-6">
+          <div
+            class="h-100 mx-lg-0 text-center border-ridge rounded-5 overflow-hidden"
+          >
+            <h3 class="py-3 bg-red text-light">Present</h3>
 
-            <p class="text-justify p-3">
+            <p class="text-justify p-3 bg-darker">
               In the present, Kratos lives as a restrained and disciplined
               warrior who prioritizes fatherhood over battle. He controls his
               anger instead of letting it control him, choosing patience,
@@ -150,7 +164,7 @@
       <img
         src="./Images/KratosStand.png"
         alt="NoIMG"
-        class="position-absolute d-none d-lg-flex kratos-stand-img bottom-0 start-0"
+        class="position-absolute d-none d-lg-flex kratos-stand-img bottom-0"
       />
 
       <article
