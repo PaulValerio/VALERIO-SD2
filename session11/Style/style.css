@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 10rem;
+  scroll-padding: 11rem;
   scrollbar-color: var(--primary) black;
 }
 
@@ -44,13 +44,11 @@ html {
 }
 
 .omega-img {
-  min-width: 10rem;
-  width: 50%;
-  max-width: 60rem;
+  width: 50dvw;
 }
 
 .kratos-rage-img {
-  width: clamp(35rem, 40rem, 45rem);
+  width: 35dvw;
   filter: drop-shadow(20px 0px 0px var(--primary));
 }
 
@@ -78,4 +76,51 @@ html {
 
 .text-justify {
   text-align: justify;
+}
+
+.h-10 {
+  height: 7rem;
+}
+
+/* For Phones */
+@media screen and (orientation: portrait) and (min-width: 300px) {
+  .kratos-rage-img {
+    height: 50dvh;
+    width: 150dvw;
+  }
+
+  .omega-img {
+    width: 150dvw;
+  }
+}
+
+/* For Phones */
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 600px) {
+  .omega-img {
+    width: 35dvw;
+  }
+}
+
+/* For Tablets */
+@media screen and (orientation: portrait) and (min-width: 760px) and (min-height: 1000px) {
+  .kratos-rage-img {
+    height: 50dvh;
+    width: 90dvw;
+  }
+
+  .omega-img {
+    width: 100dvw;
+  }
+}
+
+/* For Tablets */
+@media screen and (orientation: landscape) and (min-width: 1000px) and (min-height: 760px) {
+  .kratos-rage-img {
+    height: 60dvh;
+    width: 60dvw;
+  }
+
+  .omega-img {
+    width: 80dvw;
+  }
 }

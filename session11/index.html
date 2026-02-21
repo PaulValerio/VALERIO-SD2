@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- NAVBAR START -->
-    <nav class="p-3 bg-darker sticky-top border-nav">
+    <nav class="p-3 bg-darker sticky-top container-fluid border-nav z-3">
       <div class="d-flex align-items-center">
         <a href="#profile" class="me-auto">
           <img
@@ -43,7 +43,7 @@
           </li>
           <li>
             <h3>
-              <a href="" class="text-decoration-none text-red">Games</a>
+              <a href="#games" class="text-decoration-none text-red">Games</a>
             </h3>
           </li>
         </ul>
@@ -52,7 +52,10 @@
     <!-- NAVBAR END -->
 
     <!-- PROFILE START -->
-    <main id="profile" class="bg-main text-light border-b">
+    <main
+      class="bg-main text-light border-b vh-100 align-content-end overflow-hidden"
+      id="profile"
+    >
       <div
         class="position-relative d-flex flex-column align-items-center text-center"
       >
@@ -69,14 +72,16 @@
         <img
           src="./Images/KratosRage.png"
           alt="NoIMG"
-          class="img-fluid kratos-rage-img z-1"
+          class="kratos-rage-img z-1"
         />
       </div>
     </main>
     <!-- PROFILE END -->
 
     <!-- STORY START -->
-    <main class="container-fluid p-5 bg-darker text-light text-center border-b">
+    <main
+      class="container-fluid p-5 bg-darker text-light text-center align-content-center border-b"
+    >
       <h1 id="about" class="text-red mb-5 mb-md-3">ABOUT</h1>
 
       <article class="d-flex flex-column flex-lg-row">
@@ -139,7 +144,7 @@
 
     <!-- ARSENAL START -->
     <main
-      class="container-fluid position-relative p-5 bg-red text-light text-center"
+      class="container-fluid position-relative p-5 bg-red text-light text-center border-b overflow-hidden"
     >
       <h1 id="arsenal" class="text-red mb-5 mb-md-3">ARSENAL</h1>
       <img
@@ -209,6 +214,156 @@
       </article>
     </main>
     <!-- ARSENAL END -->
+
+    <!-- GAMES START -->
+    <main
+      class="container-fluid bg-darker p-5 bg-darker text-light text-center"
+    >
+      <h1 id="games" class="text-red">GAMES</h1>
+      <h3 class="text-red mb-5 mb-md-3">(Chronological Order)</h3>
+
+      <article class="d-flex flex-column flex-lg-row justify-content-center">
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 text-light bg-red align-content-center">
+              God of War: Ascension (2013)
+            </h3>
+            <img
+              src="./Images/GOWascension.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 bg-red text-light align-content-center">
+              God of War: Chains of Olympus (2008)
+            </h3>
+            <img
+              src="./Images/GOWcoo.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 bg-red text-light align-content-center">
+              God of War (2005)
+            </h3>
+            <img
+              src="./Images/GOWI.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+      </article>
+
+      <article class="d-flex flex-column flex-lg-row justify-content-center">
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 text-light bg-red align-content-center">
+              God of War: Betrayal (2007)
+            </h3>
+            <img
+              src="./Images/GOWbetrayal.png"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 bg-red text-light align-content-center">
+              God of War: Ghost of Sparta (2010)
+            </h3>
+            <img
+              src="./Images/GOWgos.jpg"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 bg-red text-light align-content-center">
+              God of War II (2007)
+            </h3>
+            <img
+              src="./Images/GOWII.jpg"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+      </article>
+
+      <article class="d-flex flex-column flex-lg-row justify-content-center">
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 text-light bg-red align-content-center">
+              God of War III (2010)
+            </h3>
+            <img
+              src="./Images/GOWIII.jpg"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 bg-red text-light align-content-center">
+              God of War (2018)
+            </h3>
+            <img
+              src="./Images/GOW.jpg"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+
+        <section class="col-12 col-lg-4 mx-2 my-3">
+          <div
+            class="h-100 position-relative overflow-hidden border-ridge rounded-5 overflow-hidden text-center"
+          >
+            <h3 class="py-3 h-10 bg-red text-light align-content-center">
+              God of War Ragnarök (2022)
+            </h3>
+            <img
+              src="./Images/GOWragnarok.jpg"
+              alt="NoIMG"
+              class="w-100 h-100 img-fluid object-fit-cover"
+            />
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- GAMES END -->
 
     <!-- Bootstrap Script -->
     <script
