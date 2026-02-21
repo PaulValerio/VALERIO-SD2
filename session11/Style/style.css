@@ -2,6 +2,16 @@
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box;
+  font-family: "GodOfWar";
+}
+
+@font-face {
+  font-family: "GodOfWar";
+  src: url("../Font/GODOFWAR.TTF") format("truetype");
+}
+
+section p {
+  font-family: Arial;
 }
 
 :root {
