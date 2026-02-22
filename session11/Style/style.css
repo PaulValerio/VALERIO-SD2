@@ -18,6 +18,7 @@ section p {
   --primary: rgb(79, 0, 0);
   --secondary: rgb(43, 0, 0);
   --border-b-color: rgb(116, 0, 0);
+  --red-drps: red;
   --border-color: rgba(139, 0, 0, 0.6);
   --textcolor: rgb(152, 0, 0);
 }
@@ -55,12 +56,19 @@ html {
 
 .omega-img {
   width: 50dvw;
-  filter: drop-shadow(-10px 0px 0px red);
+  filter: drop-shadow(-10px 0px 0px var(--red-drps));
+}
+
+.spark-img {
+  left: 50%;
+  top: 70%;
+  width: 100rem;
+  filter: drop-shadow(0px -10px 0px var(--red-drps));
 }
 
 .kratos-rage-img {
   width: 50dvw;
-  filter: drop-shadow(30px 0px 0px var(--primary));
+  filter: drop-shadow(0px 0px 10rem var(--red-drps));
 }
 
 .text-red {
