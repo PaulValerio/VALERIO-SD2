@@ -17,7 +17,7 @@ section p {
 :root {
   --primary: rgb(79, 0, 0);
   --secondary: rgb(43, 0, 0);
-  --dark-red: rgb(116, 0, 0);
+  --border-b-color: rgb(116, 0, 0);
   --border-color: rgba(139, 0, 0, 0.6);
   --textcolor: rgb(152, 0, 0);
 }
@@ -42,7 +42,7 @@ html {
 }
 
 .border-b {
-  border-bottom: 1rem double var(--dark-red);
+  border-bottom: 1rem double var(--border-b-color);
 }
 
 .border-ridge {
@@ -55,6 +55,7 @@ html {
 
 .omega-img {
   width: 50dvw;
+  filter: drop-shadow(-10px 0px 0px red);
 }
 
 .kratos-rage-img {
@@ -95,7 +96,7 @@ html {
   height: 100%;
   top: 50%;
   left: 50%;
-  padding: 1rem !important;
+  padding: 1rem 1rem 7rem 1rem !important;
   background: rgba(0, 0, 0, 0.2);
   color: white;
   font-family: Arial;
