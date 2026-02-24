@@ -86,7 +86,6 @@ html {
 .kratos-stand-img {
   height: 90%;
   max-width: 70%;
-  left: -20%;
   filter: drop-shadow(50px 10px 0px var(--primary));
 }
 
@@ -145,8 +144,38 @@ html {
   text-align: justify;
 }
 
-.Kratos-BG {
+.Kratos-BG,
+.Kratos-Rag,
+.Kratos-Grk {
   filter: drop-shadow(-50px -10px 0px var(--primary));
+  transition: opacity 500ms ease;
+}
+
+.Kratos-Rag,
+.Kratos-Grk {
+  opacity: 0;
+}
+
+.Kratos-past,
+.Kratos-present,
+.Kratos-about {
+  position: relative;
+}
+
+.Kratos-about:has(.Kratos-past:hover) ~ .Kratos-BG {
+  opacity: 0;
+
+  ~ .Kratos-Grk {
+    opacity: 1;
+  }
+}
+
+.Kratos-about:has(.Kratos-present:hover) ~ .Kratos-BG {
+  opacity: 0;
+
+  ~ .Kratos-Rag {
+    opacity: 1;
+  }
 }
 
 .start-80 {
