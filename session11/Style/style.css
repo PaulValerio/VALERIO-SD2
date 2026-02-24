@@ -54,6 +54,10 @@ html {
   border: 1rem double var(--border-color);
 }
 
+.Profile-main {
+  box-shadow: inset 0px 0px 50rem rgba(255, 0, 0, 0.3);
+}
+
 .omega-img {
   width: 50dvw;
   filter: drop-shadow(-10px 0px 0px var(--red-drps));
@@ -68,7 +72,7 @@ html {
 
 .kratos-rage-img {
   width: 50dvw;
-  filter: drop-shadow(0px 0px 10rem var(--red-drps));
+  filter: drop-shadow(0px 0px 1rem var(--red-drps));
 }
 
 .text-red {
@@ -190,18 +194,18 @@ html {
 @media screen and (orientation: portrait) and (min-width: 300px) {
   .kratos-rage-img {
     height: 50dvh;
-    width: 150dvw;
+    width: clamp(100dvh, 120dvw, 140dvh);
   }
 
   .omega-img {
-    width: 150dvw;
+    width: clamp(80dvh, 100dvw, 120dvh);
   }
 }
 
 /* For Phones */
-@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 600px) {
+@media screen and (orientation: landscape) and (max-width: 960px) and (max-height: 600px) {
   .omega-img {
-    width: 35dvw;
+    width: clamp(30dvh, 40dvw, 80dvh);
   }
 }
 
@@ -209,7 +213,7 @@ html {
 @media screen and (orientation: portrait) and (min-width: 760px) and (min-height: 1000px) {
   .kratos-rage-img {
     height: 55dvh;
-    width: 100dvh;
+    width: clamp(80dvh, 100dvh, 120dvh);
   }
 
   .omega-img {
@@ -218,10 +222,10 @@ html {
 }
 
 /* For Tablets */
-@media screen and (orientation: landscape) and (min-width: 1000px) and (min-height: 760px) {
+@media screen and (orientation: landscape) and (min-width: 800px) and (min-height: 760px) {
   .kratos-rage-img {
     height: 65dvh;
-    width: 70dvw;
+    width: clamp(80dvh, 100dvw, 120dvh);
   }
 
   .omega-img {
