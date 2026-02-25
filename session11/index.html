@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- NAVBAR START -->
-    <nav class="p-3 bg-darker sticky-top container-fluid border-nav z-3">
+    <nav class="p-3 bg-darker sticky-top container-fluid border-nav">
       <div class="d-flex align-items-center">
         <a href="#profile" class="me-auto">
           <img
@@ -53,34 +53,40 @@
 
     <!-- PROFILE START -->
     <main
-      class="bg-main text-light border-b vh-100 align-content-end overflow-hidden Profile-main"
+      class="bg-main position-relative text-light border-b vh-100 align-content-end overflow-hidden Profile-main"
       id="profile"
     >
       <div
-        class="position-relative d-flex flex-column align-items-center text-center"
+        class="position-relative d-flex flex-column align-items-center text-center Kratos-imgs"
       >
         <h1 class="my-3 z-1">KRATOS</h1>
 
         <p class="display-1 z-1 mx-3">The God Of War</p>
 
         <img
-          src="./Images/Spark.png"
-          alt="NoIMG"
-          class="position-absolute translate-middle spark-img z-1"
-        />
-
-        <img
-          src="./Images/gowOmega.png"
-          alt="NoIMG"
-          class="position-absolute top-50 start-50 translate-middle omega-img z-0"
-        />
-
-        <img
           src="./Images/KratosRage.png"
           alt="NoIMG"
           class="kratos-rage-img z-1"
         />
+
+        <img
+          src="./Images/Spark.png"
+          alt="NoIMG"
+          class="position-absolute translate-middle spark-img z-0"
+        />
       </div>
+
+      <img
+        src="./Images/SparkGIF.gif"
+        alt="NoGIF"
+        class="position-absolute start-50 top-50 translate-middle w-100 h-100 object-fit-fill spark-gif z-0"
+      />
+
+      <img
+        src="./Images/gowOmega.png"
+        alt="NoIMG"
+        class="position-absolute top-50 start-50 translate-middle omega-img z-0"
+      />
     </main>
     <!-- PROFILE END -->
 

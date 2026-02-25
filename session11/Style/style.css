@@ -68,11 +68,25 @@ html {
   top: 70%;
   width: 100rem;
   filter: drop-shadow(0px -10px 0px var(--red-drps));
+  transition: opacity 500ms ease;
+}
+
+.spark-gif {
+  opacity: 0;
+  transition: opacity 500ms ease;
 }
 
 .kratos-rage-img {
   width: 50dvw;
   filter: drop-shadow(0px 0px 1rem var(--red-drps));
+}
+
+.Kratos-imgs:has(.kratos-rage-img:hover) + .spark-gif {
+  opacity: 1;
+}
+
+.kratos-rage-img:hover + .spark-img {
+  opacity: 0;
 }
 
 .text-red {
