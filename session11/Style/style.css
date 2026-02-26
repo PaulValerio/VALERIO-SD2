@@ -243,6 +243,6 @@ html {
   }
 
   .omega-img {
-    width: 80dvw;
+    width: clamp(75dvh, 100dvw, 120dvh);
   }
 }

@@ -1,0 +1,15 @@
+* {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+.bg-nav {
+  background-color: black;
+  border-bottom: 1rem ridge white;
+}
