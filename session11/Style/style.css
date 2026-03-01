@@ -10,7 +10,7 @@
   src: url("../Font/GODOFWAR.TTF") format("truetype");
 }
 
-section p {
+section h3 + p {
   font-family: Arial;
 }
 
@@ -25,7 +25,7 @@ section p {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 11rem;
+  scroll-padding: 10rem;
   scrollbar-color: var(--primary) black;
 }
 
