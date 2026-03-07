@@ -1,0 +1,227 @@
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  font-family: "Aldrich";
+}
+
+:root {
+  --black: rgb(0, 0, 0);
+  --grey: rgb(45, 45, 45);
+  --transparentWhite: rgba(255, 255, 255, 0.1);
+}
+
+@font-face {
+  font-family: "Audiowide";
+  src: url("../Fonts/Audiowide-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "StalinistOne";
+  src: url("../Fonts/StalinistOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Aldrich";
+  src: url("../Fonts/Aldrich-Regular.ttf") format("truetype");
+}
+
+.bg-img {
+  filter: grayscale(1);
+}
+
+/* LOADER START */
+.loader-front {
+  background-color: var(--black);
+  transform: translateY(0dvh);
+  animation: loader-exit 500ms cubic-bezier(0.1, 1, 0.9, 1) forwards;
+  animation-delay: 3s;
+  z-index: 9999;
+}
+
+.loader-front h1 {
+  font-family: "Audiowide";
+  background-image: url(../Images/GalaxyWave.gif);
+  background-clip: text;
+  background-size: contain;
+  color: transparent;
+  font-size: clamp(2rem, 6dvw, 10rem);
+  z-index: 1;
+  animation: fade-up 1s cubic-bezier(0.1, 1, 0.9, 1) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.purple-wave1 {
+  width: clamp(100rem, 100dvw, 200rem); /*Adjust kapag may malaking screen*/
+  animation: wipe-in-left 1s ease-in forwards;
+}
+
+.purple-wave2 {
+  width: clamp(100rem, 100dvw, 200rem); /*Adjust kapag may malaking screen*/
+  animation: wipe-in-right 1s ease-in forwards;
+}
+
+@keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes wipe-in-right {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes loader-exit {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* LOADER END */
+/* MAIN LANDING START */
+/* NAVBAR START */
+.nav-bar {
+  background-color: var(--grey);
+  animation: fade-down 1s cubic-bezier(0.1, 1, 0.9, 1) forwards;
+  animation-delay: 4s;
+  transform: translateY(-10rem);
+}
+
+.nav-bar::after {
+  content: "PAULFOLIO";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 45%);
+  font-size: clamp(1rem, 2dvw, 3rem);
+  align-content: center;
+  font-family: "Audiowide";
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
+  background-color: var(--grey);
+}
+
+.nav-bar p {
+  font-family: "StalinistOne";
+  font-size: clamp(0.5rem, 1dvw, 3rem);
+  letter-spacing: 0.2rem;
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+/* NAVBAR END */
+
+/* PROFILE START */
+.profile-parent {
+  animation: fade-up 1s cubic-bezier(0.1, 1, 0.9, 1) forwards;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+.profile-child {
+  background-color: var(--transparentWhite);
+}
+
+.profile-child img {
+  filter: drop-shadow(0px -10px 0px white);
+}
+
+.top-75 {
+  top: 50%;
+  transform: translateY(-30%);
+}
+
+.txt-profile h3,
+h1 {
+  font-size: clamp(0.5rem, 3dvw, 4rem);
+}
+/* PROFILE END */
+/* MAIN LANDING END */
+
+/* ABOUT START */
+.about-anim {
+  animation: sliding 10s linear infinite;
+  transform: translateX(100%);
+  width: 150dvw;
+}
+
+.about-anim h1 {
+  font-size: clamp(0.8rem, 3dvw, 4rem);
+}
+
+.about-anim + section p {
+  font-size: clamp(0.8rem, 2dvw, 3rem);
+}
+
+@keyframes sliding {
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* ABOUT END */
+
+/* TOOLS START */
+.bg-color {
+  background-color: var(--transparentWhite);
+}
+
+.toolImg-container .col img {
+  transition:
+    filter 500ms ease,
+    transform 500ms ease;
+}
+
+.toolImg-container:has(:hover) .col img {
+  filter: blur(4px) brightness(0.6);
+}
+
+.toolImg-container .col:hover img {
+  filter: blur(0) brightness(1);
+  transform: scale(1.1);
+}
+
+.img-cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.img-cover img {
+  width: clamp(3rem, 5dvw, 6rem);
+  height: auto;
+}
+/* TOOLS END */
