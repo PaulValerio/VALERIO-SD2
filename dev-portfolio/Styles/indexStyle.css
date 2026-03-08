@@ -110,7 +110,6 @@ html {
     opacity: 0;
   }
 }
-
 /* LOADER END */
 
 /* MAIN LANDING START */
@@ -118,7 +117,7 @@ html {
 .nav-bar {
   background-color: var(--grey);
   animation: fade-down 1s cubic-bezier(0.1, 1, 0.9, 1) forwards;
-  animation-delay: 4s;
+  animation-delay: 3s;
   transform: translateY(-10rem);
   z-index: 9999 !important;
   transition: background-color 500ms ease;
@@ -198,7 +197,7 @@ html {
 /* PROFILE START */
 .profile-container {
   animation: fade-up 1s cubic-bezier(0.1, 1, 0.9, 1) forwards;
-  animation-delay: 4s;
+  animation-delay: 3s;
   opacity: 0;
   background-color: var(--transparentWhite);
   height: 100dvh;
