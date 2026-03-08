@@ -7,6 +7,7 @@
 
 :root {
   --black: rgb(0, 0, 0);
+  --dark-blue: rgb(18, 0, 51);
   --grey: rgb(45, 45, 45);
   --transparentWhite: rgba(255, 255, 255, 0.1);
 }
@@ -28,6 +29,11 @@
 
 .bg-img {
   filter: grayscale(1);
+  transition: filter 500ms ease;
+}
+
+.bg-img.change-color {
+  filter: grayscale(0);
 }
 
 /* LOADER START */
@@ -109,22 +115,48 @@
   animation: fade-down 1s cubic-bezier(0.1, 1, 0.9, 1) forwards;
   animation-delay: 4s;
   transform: translateY(-10rem);
+  z-index: 9999 !important;
+  transition: background-color 500ms ease;
+}
+
+.nav-bar.change-color {
+  background-color: var(--dark-blue);
 }
 
 .nav-bar::after {
   content: "PAULFOLIO";
+  background-image: url(../Images/GalaxyWave.gif);
+  background-clip: text;
+  background-size: 100%;
+  filter: drop-shadow(0px 0px 1px white);
+  color: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 45%);
-  font-size: clamp(1rem, 2dvw, 3rem);
+  transform: translate(-50%, 30%);
+  font-size: clamp(1rem, 3dvw, 4rem);
   align-content: center;
   font-family: "Audiowide";
   text-align: center;
   height: 100%;
   width: 50%;
+}
+
+.nav-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 45%);
+  height: 100%;
+  width: 50%;
   clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
   background-color: var(--grey);
+  transition: background-color 500ms ease;
+}
+
+.nav-bar.change-color::before {
+  background-color: var(--dark-blue);
 }
 
 .nav-bar p {
@@ -172,7 +204,6 @@ h1 {
 }
 /* PROFILE END */
 /* MAIN LANDING END */
-
 /* ABOUT START */
 .about-anim {
   animation: sliding 10s linear infinite;
@@ -184,8 +215,18 @@ h1 {
   font-size: clamp(0.8rem, 3dvw, 4rem);
 }
 
-.about-anim + section p {
-  font-size: clamp(0.8rem, 2dvw, 3rem);
+.aboutp {
+  font-size: clamp(0.5rem, 1.5dvw, 3rem);
+  opacity: 0;
+  transition:
+    opacity 500ms ease,
+    transform 500ms cubic-bezier(0.1, 2, 0.9, 1);
+  transform: translateX(20rem);
+}
+
+.aboutp.slideRight {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @keyframes sliding {
@@ -200,6 +241,33 @@ h1 {
   background-color: var(--transparentWhite);
 }
 
+.toolh1 {
+  opacity: 0;
+  transition:
+    opacity 500ms ease,
+    transform 500ms cubic-bezier(0.1, 2, 0.9, 1);
+  transform: translateX(-20rem);
+}
+
+.toolh1.slideLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toolImg {
+  opacity: 0;
+  width: clamp(5rem, 15dvw, 11rem);
+  transition:
+    opacity 500ms ease,
+    transform 500ms cubic-bezier(0.1, 1, 0.9, 1);
+  transform: translateY(5rem);
+}
+
+.toolImg.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .toolImg-container .col img {
   transition:
     filter 500ms ease,
@@ -212,7 +280,7 @@ h1 {
 
 .toolImg-container .col:hover img {
   filter: blur(0) brightness(1);
-  transform: scale(1.1);
+  transform: scale(3) rotate3d(0, 1, 0, 360deg);
 }
 
 .img-cover {
@@ -225,3 +293,94 @@ h1 {
   height: auto;
 }
 /* TOOLS END */
+
+/* PROJECTS START */
+.projecth1 {
+  position: sticky;
+  top: clamp(20dvh, 30dvh, 55dvh);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.project-container {
+  background-color: var(--dark-blue);
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-10%);
+  z-index: 2;
+  width: 50dvw;
+  height: clamp(40dvh, 50%, 55dvh);
+}
+
+.project-container h3 {
+  font-size: clamp(0.8rem, 2dvw, 3rem);
+}
+
+.project-container p {
+  font-size: clamp(0.5rem, 1dvw, 2rem);
+}
+
+.project-container img {
+  transition: transform 500ms ease;
+}
+
+.project-container img:hover {
+  transform: scale(3);
+}
+
+.visit-btn {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px var(--black);
+  font-size: clamp(0.5rem, 1dvw, 2rem);
+}
+
+.visit-btn:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px var(--black);
+}
+/* PROJECTS END */
+
+/* CONTACTS START */
+.contact-container.slideUp .col {
+  opacity: 0;
+  animation: slideUp 500ms cubic-bezier(0.1, 2, 0.9, 1) forwards;
+}
+
+.contact-container.slideUp .col:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contact-container.slideUp .col:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.contact-container img {
+  transition:
+    transform 500ms ease,
+    filter 500ms ease;
+}
+
+.contact-container img:hover {
+  transform: rotate3d(1, 1, -1, 45deg);
+  filter: drop-shadow(-100px 10px 0px var(--dark-blue));
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* CONTACTS END */
+
+/* FOOTER START */
+.footer {
+  font-size: clamp(0.8rem, 2dvw, 3rem);
+  background-color: var(--grey);
+}
+/* FOOTER END */
