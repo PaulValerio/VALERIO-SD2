@@ -27,7 +27,7 @@
     <!-- BACKGROUND IMG END -->
 
     <!-- LOADER START -->
-    <!-- <main
+    <main
       class="loader-front position-fixed top-0 w-100 vh-100 overflow-hidden d-flex justify-content-center align-items-center text-center"
     >
       <img
@@ -41,43 +41,43 @@
         class="purple-wave2 position-absolute top-100 start-50 h-100 translate-middle"
       />
       <h1>Welcome To My Portfolio</h1>
-    </main> -->
+    </main>
     <!-- LOADER END -->
 
+    <!-- NAVBAR START -->
+    <nav
+      class="nav-bar z-3 container-fluid position-fixed top-0 p-3 d-flex text-light justify-content-center align-items-center gap-2 gap-lg-5 text-center"
+    >
+      <a href="#Tools" class="nav-a text-decoration-none text-white">Tools</a>
+      <a href="#Projects" class="nav-a text-decoration-none text-white"
+        >Projects</a
+      >
+      <a href="#Contacts" class="nav-a text-decoration-none text-white"
+        >Contacts</a
+      >
+      <a href="#About" class="nav-a text-decoration-none text-white">About</a>
+    </nav>
+    <!-- NAVBAR START -->
+
     <!-- MAIN LANDING START -->
-    <main>
-      <nav
-        class="nav-bar z-3 container-fluid position-fixed top-0 p-3 d-flex text-light justify-content-center align-items-center gap-2 gap-lg-5 text-center"
-      >
-        <p>About</p>
-        <p>Tools</p>
-        <p>Projects</p>
-        <p>Contact</p>
-      </nav>
+    <main class="profile-container rounded-bottom-5 overflow-hidden">
+      <img
+        src="./Images/Me.png"
+        alt="Paul"
+        class="position-absolute bottom-0 start-0"
+      />
 
-      <section
-        class="profile-parent d-flex justify-content-center align-items-start m-5 m-lg-0"
+      <div
+        class="txt-profile position-absolute top-50 start-50 translate-middle text-center text-white"
       >
-        <div
-          class="profile-child d-flex ratio ratio-16x9 m-0 p-5 p-lg-0 rounded-5 overflow-hidden text-center align-items-center"
-        >
-          <img
-            src="./Images/Me.png"
-            alt="NoIMG"
-            class="position-absolute top-75 img-fluid w-75 h-75 z-1"
-          />
-
-          <div class="txt-profile text-white position-relative z-0">
-            <h3>Hello, I Am</h3>
-            <h1 class="text-primary">Paul Ashlee T. Valerio</h1>
-          </div>
-        </div>
-      </section>
+        <h2>Hello, I Am</h2>
+        <h1 class="text-primary">Paul Ashlee T. Valerio</h1>
+      </div>
     </main>
     <!-- MAIN LANDING END -->
 
     <!-- ABOUT SECTION START -->
-    <main class="overflow-x-hidden">
+    <main id="About" class="overflow-x-hidden">
       <section class="about-anim text-center text-white mt-0 mt-lg-5">
         <h1 class="text-primary">
           ABOUT ME + ABOUT ME + ABOUT ME + ABOUT ME + ABOUT ME + ABOUT ME
@@ -96,6 +96,7 @@
 
     <!-- TOOLS SECTION START -->
     <main
+      id="Tools"
       class="overflow-x-hidden d-block justify-content-center align-items-center text-center"
     >
       <h1 class="toolh1 text-primary mb-3">TOOL STACK</h1>
@@ -145,7 +146,7 @@
     <!-- TOOLS SECTION END -->
 
     <!-- PROJECTS SECTION START -->
-    <main>
+    <main id="Projects">
       <h1 class="projecth1 text-primary text-center mb-5">MY PROJECTS</h1>
       <section
         class="d-flex flex-column justify-content-center align-items-center"
@@ -166,7 +167,30 @@
               class="img-fluid w-25 rounded-3"
             />
           </div>
-          <p class="mt-3">A app for visualizing how binary search tree works</p>
+
+          <div
+            popover
+            id="bst-popover"
+            class="project-popover position-fixed top-50 start-50 translate-middle w-50 h-50 rounded p-3"
+          >
+            <button
+              class="btn-close bg-danger p-3 my-3 align-self-center"
+              popovertarget="bst-popover"
+              popovertargetaction="hide"
+            ></button>
+
+            <img src="./Images/BSTStart.png" class="img-fluid rounded-3 mb-2" />
+            <img src="./Images/BSTEnd.png" class="img-fluid rounded-3" />
+          </div>
+
+          <p class="my-3">A app for visualizing how binary search tree works</p>
+
+          <button
+            class="project-btn bg-dark text-white p-0 p-lg-3 w-50 rounded-pill"
+            popovertarget="bst-popover"
+          >
+            View Screenshots
+          </button>
         </div>
 
         <div
@@ -185,10 +209,36 @@
               class="img-fluid w-25 rounded-3"
             />
           </div>
-          <p class="mt-3">
+
+          <div
+            popover
+            id="sac-popover"
+            class="project-popover position-fixed top-50 start-50 translate-middle w-50 h-50 rounded p-3"
+          >
+            <button
+              class="btn-close bg-danger p-3 my-3 align-self-center"
+              popovertarget="sac-popover"
+              popovertargetaction="hide"
+            ></button>
+
+            <img src="./Images/SchedAC.png" class="img-fluid rounded-3 mb-2" />
+            <img
+              src="./Images/SchedACHasValue.png"
+              class="img-fluid rounded-3"
+            />
+          </div>
+
+          <p class="my-3">
             A app that calculates the First Come First Serve (FCFS) and Shortest
             Remaining Time First (SRTF)
           </p>
+
+          <button
+            class="project-btn bg-dark text-white p-0 p-lg-3 w-50 rounded-pill"
+            popovertarget="sac-popover"
+          >
+            View Screenshots
+          </button>
         </div>
 
         <div
@@ -207,15 +257,37 @@
               class="img-fluid w-25 rounded-3"
             />
           </div>
+
+          <div
+            popover
+            id="od-popover"
+            class="project-popover position-fixed top-50 start-50 translate-middle w-50 h-50 rounded p-3"
+          >
+            <button
+              class="btn-close bg-danger p-3 my-3 align-self-center"
+              popovertarget="od-popover"
+              popovertargetaction="hide"
+            ></button>
+
+            <img src="./Images/LMods.png" class="img-fluid rounded-3 mb-2" />
+            <img src="./Images/DMods.png" class="img-fluid rounded-3" />
+          </div>
+
           <p class="my-3">A dog dating website</p>
 
-          <a
-            href="https://only-dogs.vercel.app/"
-            class="visit-btn bg-dark text-white p-0 p-lg-3 w-50 rounded-pill text-decoration-none"
-            target="_blank"
+          <button
+            class="project-btn bg-dark text-white p-0 p-lg-3 w-50 rounded-pill mb-3"
+            popovertarget="od-popover"
+          >
+            View Screenshots
+          </button>
+
+          <button
+            class="project-btn bg-dark text-white p-0 p-lg-3 w-50 rounded-pill"
+            onclick="window.open('https://only-dogs.vercel.app/', '_blank')"
           >
             Visit
-          </a>
+          </button>
         </div>
 
         <div
@@ -234,16 +306,42 @@
               class="img-fluid w-25 rounded-3"
             />
           </div>
-          <p class="mt-3">
+
+          <div
+            popover
+            id="cc-popover"
+            class="project-popover position-fixed top-50 start-50 translate-middle w-50 h-50 rounded p-3"
+          >
+            <button
+              class="btn-close bg-danger p-3 my-3 align-self-center"
+              popovertarget="cc-popover"
+              popovertargetaction="hide"
+            ></button>
+
+            <img
+              src="./Images/LMHasValue.png"
+              class="img-fluid rounded-3 mb-2"
+            />
+            <img src="./Images/DMHasValue.png" class="img-fluid rounded-3" />
+          </div>
+
+          <p class="my-3">
             A app that calculates the materials needed for walls
           </p>
+
+          <button
+            class="project-btn bg-dark text-white p-0 p-lg-3 w-50 rounded-pill"
+            popovertarget="cc-popover"
+          >
+            View Screenshots
+          </button>
         </div>
       </section>
     </main>
     <!-- PROJECTS SECTION END -->
 
     <!-- CONTACTS SECTION START -->
-    <main>
+    <main id="Contacts">
       <section
         class="d-flex vh-100 flex-column justify-content-center align-items-center text-light"
       >
