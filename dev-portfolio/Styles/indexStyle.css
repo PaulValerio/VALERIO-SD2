@@ -5,15 +5,16 @@
   font-family: "Aldrich";
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
   --black: rgb(0, 0, 0);
   --dark-blue: rgb(18, 0, 51);
   --grey: rgb(45, 45, 45);
   --transparentWhite: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--dark-blue) var(--black);
 }
 
 @font-face {
@@ -111,7 +112,6 @@ html {
   }
 }
 /* LOADER END */
-
 /* MAIN LANDING START */
 /* NAVBAR START */
 .nav-bar {
@@ -203,23 +203,11 @@ html {
   height: 100dvh;
 }
 
-/* For Phones */
-@media screen and (orientation: portrait) and (min-width: 300px) {
-  .profile-container {
-    height: 50dvh;
-  }
-}
-
 .profile-container img {
   min-height: 10rem;
   min-width: 10rem;
   width: 50%;
   filter: drop-shadow(0px -10px 0px white);
-}
-
-.top-75 {
-  top: 50%;
-  transform: translateY(-30%);
 }
 
 .txt-profile h2,
@@ -228,6 +216,7 @@ h1 {
 }
 /* PROFILE END */
 /* MAIN LANDING END */
+
 /* ABOUT START */
 .about-anim {
   animation: sliding 10s linear infinite;
@@ -327,14 +316,51 @@ h1 {
 }
 
 .project-container {
-  background-color: var(--dark-blue);
+  padding: 10rem;
   position: sticky;
   top: 50vh;
-  transform: translateY(-10%);
+  transform: translateY(-20%);
   z-index: 2;
   width: 50dvw;
-  min-height: 20dvh;
-  height: clamp(40dvh, 50%, 55dvh);
+  height: 65dvh;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.project-container::before {
+  content: "";
+  position: absolute;
+  inset: 50;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  background: conic-gradient(
+    rgba(0, 17, 255, 1) 0% 25%,
+    transparent 25% 50%,
+    rgb(106, 47, 255) 50% 75%,
+    transparent 75% 100%
+  );
+  z-index: -2;
+  animation: rotate 5s linear infinite;
+}
+
+.project-container::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background-color: var(--dark-blue);
+  z-index: -1;
+  border-radius: 1rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .project-container h3 {
@@ -414,3 +440,17 @@ h1 {
   background-color: var(--grey);
 }
 /* FOOTER END */
+
+/* For Phones */
+@media screen and (orientation: portrait) and (min-width: 300px) {
+  .profile-container {
+    height: 50dvh;
+  }
+
+  .project-container {
+    width: 80dvw;
+    height: 50dvh;
+    top: 30vh;
+    transform: translateY(10%);
+  }
+}
