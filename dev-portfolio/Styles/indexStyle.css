@@ -316,15 +316,14 @@ h1 {
 }
 
 .project-container {
-  padding: 10rem;
   position: sticky;
   top: 50vh;
   transform: translateY(-20%);
   z-index: 2;
   width: 50dvw;
-  height: 65dvh;
-  overflow: hidden;
+  min-height: 65dvh;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 .project-container::before {
@@ -418,7 +417,7 @@ h1 {
 
 .contact-container img:hover {
   transform: rotate3d(1, 1, -1, 45deg);
-  filter: drop-shadow(-100px 10px 0px var(--dark-blue));
+  filter: drop-shadow(-100px 10px 0px var(--grey));
 }
 
 @keyframes slideUp {
@@ -449,7 +448,8 @@ h1 {
 
   .project-container {
     width: 80dvw;
-    height: 50dvh;
+    min-height: 50dvh;
+    height: auto;
     top: 30vh;
     transform: translateY(10%);
   }
