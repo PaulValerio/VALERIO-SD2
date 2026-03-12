@@ -68,6 +68,6 @@ console.log(typeof isMarried, typeof isRegistered);
 let province = "Pampanga";
 
 console.log("I love in " + province);
-console.log("My overall grade is: " + gwa);
 
-//
+// Type-Coercion - Concatenation of a string and a number or other data types that will be all converted to a string
+console.log("My overall grade is: " + gwa);
