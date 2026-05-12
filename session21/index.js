@@ -104,9 +104,19 @@ function Pokemon(name, level, health, mp) {
       `${this.name} used tackle attack! Opponent: ${target.name} - Health: ${(target.health -= damage)}`,
     );
 
-    console.log(
-      `${this.name} gained 40 MP from tackle! MP: ${(this.mp += 40)}`,
-    );
+    if (this.mp >= 100) {
+      console.log(`${this.name}'s MP is full`);
+    } else if (this.mp > 60) {
+      let mpUp = 100 - this.mp;
+      console.log(
+        `${this.name} gained ${mpUp} MP from tackle! MP: ${(this.mp += mpUp)}`,
+      );
+    } else {
+      let mpUp = 40;
+      console.log(
+        `${this.name} gained ${mpUp} MP from tackle! MP: ${(this.mp += mpUp)}`,
+      );
+    }
   };
 
   this.skill1 = function (target) {
@@ -140,13 +150,20 @@ function Pokemon(name, level, health, mp) {
   };
 
   this.healthPotion = function () {
-    if (this.health > 500) {
+    if (this.health >= 500) {
       console.log(`${this.name} can not use health potion!`);
-    } else if (this.health + 150 >= 500) {
-      let healthUp = 500 - this.healh;
-      console.log(`${this.name} heals to ${(this.health += healthUp)}`);
+    } else if (this.health > 350) {
+      let healthUp = 500 - this.health;
+      console.log(
+        `The health potion added: ${healthUp} to ${this.name} - Health: ${(this.health += healthUp)}`,
+      );
+    } else {
+      let healthUp = 150;
+      console.log(
+        `The health potion added: ${healthUp} to ${this.name} - Health: ${(this.health += healthUp)}`,
+      );
     }
-  }
+  };
 }
 
 let pikachu = new Pokemon("Pikachu", 5, 100, 100);
@@ -172,3 +189,4 @@ pikachu.healthPotion();
 pikachu.healthPotion();
 
 console.log(pikachu);
+console.log(charmander);
