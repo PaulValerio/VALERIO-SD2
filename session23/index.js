@@ -129,4 +129,124 @@ server.post("/tasks/:taskid/task-completed", (req, res) => {
   });
 });
 
+server.get("/tasks/all", (req, res) => {
+  Task.find({}).then((result, err) => {
+    if (err) {
+      res.send("There is an error fetching all tasks.");
+    } else if (result.length == 0) {
+      res.status(200).send({
+        code: 200,
+        message: "No tasks found.",
+      });
+    } else {
+      res.status(200).send({
+        code: 200,
+        message: "Here are all tasks.",
+        count: result.length,
+        data: result,
+      });
+    }
+  });
+});
+
+server.get("/tasks/get-completed", (req, res) => {
+  Task.find({ status: "completed" }).then((result, err) => {
+    if (err) {
+      res.send("There is an error fetching completed tasks.");
+    } else if (result.length == 0) {
+      res.status(200).send({
+        code: 200,
+        message: "No completed tasks found.",
+      });
+    } else {
+      res.status(200).send({
+        code: 200,
+        message: "Here are all completed tasks.",
+        count: result.length,
+        data: result,
+      });
+    }
+  });
+});
+
+server.get("/tasks/get-pending", (req, res) => {
+  Task.find({ status: "pending" }).then((result, err) => {
+    if (err) {
+      res.send("There is an error fetching pending tasks.");
+    } else if (result.length == 0) {
+      res.status(200).send({
+        code: 200,
+        message: "No pending tasks found.",
+      });
+    } else {
+      res.status(200).send({
+        code: 200,
+        message: "Here are all pending tasks.",
+        count: result.length,
+        data: result,
+      });
+    }
+  });
+});
+
+server.patch("/tasks/active/:taskId", (req, res) => {
+  Task.findOne({ _id: req.params.taskId }).then((result, err) => {
+    if (result == null) {
+      res.send("Task not found. Cannot update active status!");
+    } else {
+      if (result.isActive == false) {
+        result.isActive = true;
+      } else {
+        result.isActive = false;
+      }
+
+      result.save().then((updatedTask, updateErr) => {
+        if (updateErr) {
+          res.send("There is an error updating task active status.");
+        } else {
+          res.status(200).send({
+            code: 200,
+            message: "Task active status is now updated!",
+            data: updatedTask,
+          });
+        }
+      });
+    }
+  });
+});
+
+server.get("/tasks/get-archived", (req, res) => {
+  Task.find({ isActive: false }).then((result, err) => {
+    if (err) {
+      res.send("There is an error fetching archived tasks.");
+    } else if (result.length == 0) {
+      res.status(200).send({
+        code: 200,
+        message: "No archived tasks found.",
+      });
+    } else {
+      res.status(200).send({
+        code: 200,
+        message: "Here are all archived tasks.",
+        count: result.length,
+        data: result,
+      });
+    }
+  });
+});
+
+server.delete("/tasks/delete/:taskId", (req, res) => {
+  Task.findOneAndDelete({ _id: req.params.taskId }).then((result, err) => {
+    if (result == null) {
+      res.send("Task not found. Cannot delete!");
+    } else {
+      res.status(200).send({
+        code: 200,
+        message: "Task is now deleted!",
+        data: result,
+      });
+    }
+  });
+});
+
 server.listen(port, () => console.log(`Server is now running`));
