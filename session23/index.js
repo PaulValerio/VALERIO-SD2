@@ -11,9 +11,6 @@ const port = 5000;
 // dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 // Trigger connection to mongoDB thru mongoose
-mongoose.connect(
-  "mongodb+srv://admin:admin123@sd2-valerio.dcjgp5j.mongodb.net/task-management=SD2-VALERIO",
-);
 
 let db = mongoose.connection;
 
