@@ -10,7 +10,7 @@ const port = 5000;
 // const dns = require("dns");
 // dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
-// Trigger connection to mongoDB thru mongoose
+// Trigger connection to mongoDB thru mongoose (Remove)
 
 let db = mongoose.connection;
 
